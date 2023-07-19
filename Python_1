@@ -1,0 +1,23 @@
+def main():
+    # Input the first list
+    list1 = input("Enter the first list of strings (comma-separated): ").split(",")
+
+    # Input the second list
+    list2 = input("Enter the second list of strings (comma-separated): ").split(",")
+
+    # Remove leading/trailing spaces from the input strings
+    list1 = [element.strip() for element in list1]
+    list2 = [element.strip() for element in list2]
+
+    # Find the difference between the lists
+    difference = [element for element in list1 if element not in list2]
+    repetitive = [element for element in list1 if element in list2]
+
+    # Output the result
+    print("Unique elements in the first list that are not in the second list:")
+    print(difference)
+    print("Elements in the first list that are also in the second list:")
+    print(repetitive)
+
+if __name__ == "__main__":
+    main()
