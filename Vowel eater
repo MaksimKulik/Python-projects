@@ -1,0 +1,8 @@
+#program that asks you to enter a word and prints it out back without vowels (all in uppercase)
+user_word  = input("Enter the word: ")
+user_word = user_word.upper()
+
+for i in user_word:
+    if( i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U'):
+        continue
+    print(i)
