@@ -1,0 +1,20 @@
+#This programs lets you find the average number among the entered
+
+sum = 0
+counter = 0
+
+while True:
+    number = input("Enter a number or type a negative number to end the program: ")
+    if number is not int:
+        print ("This is not a number!🤬")
+    if number is int:
+        if number < 0:
+            break
+        counter += 1
+        sum += number
+
+if counter != 0:
+    average_number = sum / counter
+    print("The average is", average_number)
+else:
+    print("You haven't entered any number.")
