@@ -6,7 +6,7 @@ def is_year_leap(year):
         return False
 
 def days_in_month(year, month):
-    month = month.lower()
+    month = str(month).lower()
     # Ascertain the amount of days in the month
     if month == "january" or month == "march" or month == "may" or month == "july" or month == "august" or month == "october" or month == "december" or month == "1" or month == "3" or month == "5" or month == "7" or month == "8" or month == "10" or month == "12":
         return 31
@@ -32,10 +32,5 @@ else:
     
 if days_in_month(year, month):
     print (f"{month} month has {days_in_month(year, month)} days.")
-elif days_in_month(year, month) == False:
-    print (f"{month} is not a month.")
-    
-if days_in_month(year, month):
-    print (f"{month} has {days_in_month(year, month)} days.")
 elif days_in_month(year, month) == False:
     print (f"{month} is not a month.")
