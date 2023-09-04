@@ -1,0 +1,13 @@
+#A natural number is prime if it is greater than 1 and has no divisors other than 1 and itself.
+def is_prime(num):
+    if num <= 1:
+        return False
+        #dividing num by every possible number more than 1 and less than itself to verify if it is divisible by anything 
+        for i in range (2, int(num**0.5) + 1):
+            if num % i == 0:
+                return False
+    return True  
+# Start program   
+num = (int(input("Enter the number to check if it is prime:")))
+#print result 
+print(is_prime(num))
