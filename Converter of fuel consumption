@@ -1,0 +1,22 @@
+def liters_100km_to_miles_gallon(liters):
+    a = 100 / liters
+    #a = amount of km can be passed with 1 liter of fuel
+    b = float(a / 1.609344)
+    #b = amount of miles that can be passed with 1 liter of fuel
+    c = float(b * 3.785411784)
+    #c = amount of miles that can be passed with 1 gallon of fuel
+    return c
+def miles_gallon_to_liters_100km(miles):
+    d = float(miles / 3.785411784)
+    #d = amount of miles that can be passed with 1 liter of fuel
+    e = float(d * 1.609344)
+    #e = amount of km can be passed with 1 liter of fuel
+    g = float(100 / e)
+    #g = liters of fuel required to travel 100km
+    return g 
+    
+liters = float(input("Enter the liters per 100 km to be converted to miles per gallon: "))    
+print(miles_gallon_to_liters_100km(liters))
+
+miles = float(input("Enter the miles per gallon to be converted to liters per 100 km: "))  
+print(miles_gallon_to_liters_100km(miles))
